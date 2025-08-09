@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D2BHJEJC77U5663GU4C0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【奈良県最高値】訪問査定予約受付中｜社長直通で仲介手数料無料｜センチュリー21ホームマート</title>
@@ -91,6 +104,7 @@
             border: 4px solid #C8A97E;
             box-shadow: 0 8px 32px rgba(200, 169, 126, 0.3);
             object-fit: cover;
+            background-color: white;
         }
         
         .stats-card {
@@ -114,15 +128,72 @@
         .brand-logo {
             max-height: 80px;
             width: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
         }
 
         .mascot-image {
             max-width: 150px;
             height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
         }
 
         .brand-section {
             background: linear-gradient(135deg, #FFF7ED 0%, #FEEBC8 100%);
+        }
+
+        .profile-section {
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #C8A97E;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 18px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #E5E7EB;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .gift-image {
+            max-width: 200px;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -197,7 +268,7 @@
                              alt="乾 佑企 代表取締役" 
                              class="president-image"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div style="display:none;" class="president-image bg-gray-300 flex items-center justify-center text-4xl font-bold text-gray-600">
+                        <div style="display:none;" class="president-image bg-white flex items-center justify-center text-4xl font-bold text-gray-600">
                             乾
                         </div>
                     </div>
@@ -245,9 +316,19 @@
                 <i class="fas fa-calendar-check mr-3"></i>
                 訪問査定予約受付中
             </h2>
-            <p class="text-white text-lg mb-6">
-                訪問査定で必ずもらえるプレゼント：<strong class="text-2xl">仲介手数料無料</strong>
-            </p>
+            <div class="flex flex-col items-center mb-6">
+                <p class="text-white text-lg mb-4">
+                    訪問査定で必ずもらえるプレゼント
+                </p>
+                <img src="quocard1000.png" 
+                     alt="Amazonギフト券1,000円分" 
+                     class="gift-image"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display:none;" class="bg-white p-6 rounded-lg">
+                    <div class="text-2xl font-bold century21-gold-text">Amazonギフト券</div>
+                    <div class="text-3xl font-bold text-gray-800">1,000円分</div>
+                </div>
+            </div>
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <a href="tel:0120-43-8639" class="phone-button text-white px-8 py-4 rounded-lg font-bold text-lg inline-flex items-center">
                     <i class="fas fa-phone mr-3"></i>
@@ -654,7 +735,6 @@
                 <div class="bg-white p-6 rounded-lg">
                     <div class="text-2xl font-bold century21-gold-text mb-4">無料</div>
                     <h3 class="font-bold mb-2">社長自らご対応</h3>
-                    <p class="text-sm text-gray-600">（通常58万円/日相当）</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-lg">
@@ -708,6 +788,121 @@
                 <p class="text-sm opacity-75">
                     「提示が1円でもご納得に至らなければ、その場でご解約ください。」
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社長プロフィールセクション -->
+    <section class="profile-section py-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    代表取締役　乾 佑企のご紹介
+                </h2>
+                <p class="text-lg text-gray-600">
+                    お客様の利益を第一に、最良の結果を提供する
+                </p>
+            </div>
+
+            <div class="profile-card">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 左側：写真と基本情報 -->
+                    <div class="text-center md:text-left">
+                        <div class="flex justify-center md:justify-start mb-6">
+                            <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/century21-talent-formal.png" 
+                                 alt="乾 佑企 代表取締役" 
+                                 class="president-image"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div style="display:none;" class="president-image bg-white flex items-center justify-center text-4xl font-bold text-gray-600 border-2 border-gray-300">
+                                乾
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-bold text-gray-800">乾 佑企</h3>
+                            <p class="text-lg text-gray-600">いぬい ゆうき</p>
+                            
+                            <div class="space-y-2 text-left">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-birthday-cake text-yellow-500"></i>
+                                    <span class="text-gray-700">32歳（1993年2月24日生）</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-map-marker-alt text-red-500"></i>
+                                    <span class="text-gray-700">奈良県北葛城郡広陵町出身</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-briefcase text-blue-500"></i>
+                                    <span class="text-gray-700">センチュリー21ホームマート 代表取締役</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-chart-line text-green-500"></i>
+                                    <span class="text-gray-700">不動産業界歴12年</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右側：経歴と強み -->
+                    <div>
+                        <div class="mb-8">
+                            <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-history mr-3 century21-gold-text"></i>
+                                経歴
+                            </h4>
+                            <div class="space-y-2">
+                                <div class="timeline-item">
+                                    <div class="font-bold text-gray-800">2013年9月</div>
+                                    <div class="text-gray-600">20歳でホームマート創業（奈良県北葛城郡広陵町）</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="font-bold text-gray-800">2018年11月</div>
+                                    <div class="text-gray-600">IT法人を代表取締役として設立</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="font-bold text-gray-800">2025年3月</div>
+                                    <div class="text-gray-600">センチュリー21グループの奈良エリアで代表取締役就任</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="font-bold text-gray-800">取引実績</div>
+                                    <div class="text-gray-600">累計1,200件以上の売買・リフォームに携わる</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-star mr-3 century21-gold-text"></i>
+                                強み
+                            </h4>
+                            <div class="grid grid-cols-1 gap-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <i class="fas fa-handshake text-blue-500 mr-2"></i>
+                                    <span class="text-gray-700">自ら現場に立ち、直接交渉・提案</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <i class="fas fa-network-wired text-green-500 mr-2"></i>
+                                    <span class="text-gray-700">地域密着のネットワークと全国規模のブランド力</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <i class="fas fa-hammer text-orange-500 mr-2"></i>
+                                    <span class="text-gray-700">自社職人による高品質なリフォーム体制</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 信条 -->
+                <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                        <i class="fas fa-quote-left text-3xl century21-gold-text mb-4"></i>
+                        <p class="text-xl text-gray-800 font-medium italic">
+                            「お客様の利益を第一に、最良の結果を提供する」
+                        </p>
+                        <i class="fas fa-quote-right text-3xl century21-gold-text mt-4"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
