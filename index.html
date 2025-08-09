@@ -8,7 +8,6 @@
 var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-
   ttq.load('D2BHJEJC77U5663GU4C0');
   ttq.page();
 }(window, document, 'ttq');
@@ -104,7 +103,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             border: 4px solid #C8A97E;
             box-shadow: 0 8px 32px rgba(200, 169, 126, 0.3);
             object-fit: cover;
-            background-color: white;
         }
         
         .stats-card {
@@ -128,7 +126,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         .brand-logo {
             max-height: 80px;
             width: auto;
-            background-color: white;
             padding: 10px;
             border-radius: 8px;
         }
@@ -136,7 +133,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         .mascot-image {
             max-width: 150px;
             height: auto;
-            background-color: white;
             padding: 10px;
             border-radius: 8px;
         }
@@ -190,10 +186,62 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         .gift-image {
             max-width: 200px;
             height: auto;
-            background-color: white;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 一括査定の闇セクション */
+        .dark-truth-section {
+            background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+        }
+
+        .flow-arrow {
+            font-size: 2rem;
+            color: #DC2626;
+            margin: 1rem 0;
+        }
+
+        .danger-card {
+            background: white;
+            border: 2px solid #DC2626;
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .danger-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #DC2626;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
+
+        /* スマホ表示の改善 */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 1.75rem;
+                line-height: 1.3;
+            }
+            
+            .hero-title span {
+                display: inline;
+            }
+
+            .no-wrap {
+                white-space: nowrap;
+            }
+        }
+
+        .footer-logo {
+            max-height: 60px;
+            width: auto;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -219,30 +267,94 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         </div>
     </header>
 
-    <!-- 緊急告知バナー -->
-    <div class="bg-red-600 text-white py-3 px-6 text-center">
-        <div class="container mx-auto">
-            <p class="font-bold text-lg">
-                <i class="fas fa-exclamation-triangle mr-2"></i>
-                よくある一括査定サイトで<span class="text-yellow-300 text-xl">580万円損</span>をしたケースがあります！一括査定サイトは、問い合わせ１件につき、不動産会社はサイト運営社に約１万円を支払う仕組みなので、不動産会社が血眼になって出費の回収をしようとめちゃくちゃするので、実は裏が怖い。
-            </p>
+    <!-- 一括査定の闇暴露セクション（改善版） -->
+    <section class="dark-truth-section py-8 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-red-600 mb-4">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    一括査定サイトの闇を暴露
+                </h2>
+                <p class="text-lg font-bold text-gray-800">
+                    実際に<span class="text-red-600 text-xl">580万円損</span>をしたケースがあります
+                </p>
+            </div>
+
+            <!-- 図解フロー -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="danger-card">
+                        <div class="danger-badge">STEP 1</div>
+                        <div class="text-4xl mb-3 text-red-500">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">あなたが査定依頼</h3>
+                        <p class="text-sm text-gray-600">一括査定サイトに個人情報を入力</p>
+                    </div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="danger-card">
+                        <div class="danger-badge">STEP 2</div>
+                        <div class="text-4xl mb-3 text-orange-500">
+                            <i class="fas fa-yen-sign"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">
+                            不動産会社が<br>
+                            <span class="text-red-600">1件1万円支払い</span>
+                        </h3>
+                        <p class="text-sm text-gray-600">サイト運営会社に高額な紹介料</p>
+                    </div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="danger-card">
+                        <div class="danger-badge">結果</div>
+                        <div class="text-4xl mb-3 text-red-600">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">
+                            血眼で回収<br>
+                            <span class="text-red-600">売主が損する</span>
+                        </h3>
+                        <p class="text-sm text-gray-600">囲い込み・安値誘導が横行</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 警告メッセージ -->
+            <div class="bg-red-600 text-white p-4 rounded-lg text-center">
+                <p class="font-bold">
+                    <i class="fas fa-shield-alt mr-2"></i>
+                    当社は一括査定サイトを使いません。社長直通で最高値を実現します。
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Hero Section -->
     <section class="py-16 px-6 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div class="container mx-auto text-center">
             <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-                    二度と安売りしない。<br>
-                    奈良の売却は<span class="century21-gold-text">"社長直通"</span>で<br>
-                    <span class="text-red-600">相場最高値</span>へ。
+                <h1 class="hero-title text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+                    <span class="no-wrap">二度と安売りしない。</span>
+                    <span class="block md:inline">奈良の売却は</span>
+                    <span class="century21-gold-text no-wrap">"社長直通"</span><span class="no-wrap">で</span>
+                    <span class="block text-red-600 no-wrap">相場最高値へ。</span>
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-                    センチュリー21ホームマートの社長 <strong>乾 佑企</strong> が、<br>
-                    売主専属エージェントとして最高提示額の比較表まで開示。<br>
-                    囲い込みゼロ、情報漏えいゼロ、結果だけをお渡しします。
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">
+                    <span class="block md:inline">センチュリー21ホームマートの社長</span>
+                    <strong class="no-wrap">乾 佑企</strong><span class="no-wrap">が、</span>
+                    <span class="block md:inline">売主専属エージェントとして</span>
+                    <span class="block md:inline">最高提示額の比較表まで開示。</span>
+                    <span class="block">囲い込みゼロ、情報漏えいゼロ、</span>
+                    <span class="no-wrap">結果だけをお渡しします。</span>
                 </p>
 
                 <!-- 実績表示 -->
@@ -268,7 +380,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                              alt="乾 佑企 代表取締役" 
                              class="president-image"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div style="display:none;" class="president-image bg-white flex items-center justify-center text-4xl font-bold text-gray-600">
+                        <div style="display:none;" class="president-image bg-gray-200 flex items-center justify-center text-4xl font-bold text-gray-600">
                             乾
                         </div>
                     </div>
@@ -277,8 +389,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                             代表取締役　乾 佑企
                         </h2>
                         <p class="text-gray-600 leading-relaxed">
-                            「奈良の不動産を"相場最高値"で新しい未来へ繋げる。<br>
-                            提示が1円でもご納得に至らなければ、その場でご解約ください。」
+                            <span class="block md:inline">「奈良の不動産を</span>
+                            <span class="no-wrap">"相場最高値"で</span>
+                            <span class="block md:inline">新しい未来へ繋げる。</span>
+                            <span class="block">提示が1円でもご納得に至らなければ、</span>
+                            <span class="no-wrap">その場でご解約ください。」</span>
                         </p>
                     </div>
                 </div>
@@ -293,16 +408,19 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 <div class="flex flex-col items-center">
                     <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/century21-logo-gold.png" 
                          alt="センチュリー21ロゴ" 
-                         class="brand-logo mb-4">
+                         class="brand-logo mb-4 bg-white">
                     <p class="text-gray-600 font-medium">信頼のセンチュリー21ブランド</p>
                 </div>
                 <div class="flex items-center space-x-6">
                     <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/crayon-shin-chan-1.png" 
                          alt="クレヨンしんちゃん" 
-                         class="mascot-image">
+                         class="mascot-image bg-white">
                     <div class="text-left">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">安心・信頼の実績</h3>
-                        <p class="text-gray-600">全国960店舗超のネットワークで<br>あなたの大切な不動産売却をサポート</p>
+                        <p class="text-gray-600">
+                            <span class="block md:inline">全国960店舗超のネットワークで</span>
+                            <span class="block md:inline">あなたの大切な不動産売却をサポート</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -322,7 +440,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </p>
                 <img src="quocard1000.png" 
                      alt="Amazonギフト券1,000円分" 
-                     class="gift-image"
+                     class="gift-image bg-white"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div style="display:none;" class="bg-white p-6 rounded-lg">
                     <div class="text-2xl font-bold century21-gold-text">Amazonギフト券</div>
@@ -413,15 +531,18 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <section class="py-16 px-6 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
-                乾 佑企が"社長直通"で動く5つの差別化
+                <span class="block md:inline">乾 佑企が"社長直通"で動く</span>
+                <span class="block md:inline">5つの差別化</span>
             </h2>
-            <p class="text-center text-xl text-gray-600 mb-12">
-                センチュリー21の奈良県エリアで12年間社長を務める乾 佑企と話するのが最善策！
+            <p class="text-center text-lg md:text-xl text-gray-600 mb-12">
+                <span class="block md:inline">センチュリー21の奈良県エリアで</span>
+                <span class="block md:inline">12年間社長を務める乾 佑企と</span>
+                <span class="no-wrap">話するのが最善策！</span>
             </p>
 
             <div class="space-y-8">
                 <div class="feature-card flex items-start space-x-6">
-                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">1</div>
+                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">1</div>
                     <div>
                         <h3 class="text-xl font-bold mb-3 century21-gold-text">奈良県の不動産会社の社長・支店長との10年以上の繋がり</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -431,7 +552,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="feature-card flex items-start space-x-6">
-                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">2</div>
+                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">2</div>
                     <div>
                         <h3 class="text-xl font-bold mb-3 century21-gold-text">売主専属エージェント宣言</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -441,7 +562,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="feature-card flex items-start space-x-6">
-                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">3</div>
+                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">3</div>
                     <div>
                         <h3 class="text-xl font-bold mb-3 century21-gold-text">代表が前面交渉</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -451,7 +572,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="feature-card flex items-start space-x-6">
-                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">4</div>
+                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">4</div>
                     <div>
                         <h3 class="text-xl font-bold mb-3 century21-gold-text">センチュリー21の広告導線</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -461,7 +582,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="feature-card flex items-start space-x-6">
-                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">5</div>
+                    <div class="century21-gold text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">5</div>
                     <div>
                         <h3 class="text-xl font-bold mb-3 century21-gold-text">難案件もワンストップ</h3>
                         <p class="text-gray-600 leading-relaxed">
@@ -482,7 +603,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
             <div class="space-y-8">
                 <div class="flex items-center space-x-6">
-                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold">
+                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
                         STEP<br>1
                     </div>
                     <div>
@@ -492,7 +613,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="flex items-center space-x-6">
-                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold">
+                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
                         STEP<br>2
                     </div>
                     <div>
@@ -502,7 +623,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="flex items-center space-x-6">
-                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold">
+                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
                         STEP<br>3
                     </div>
                     <div>
@@ -512,7 +633,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="flex items-center space-x-6">
-                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold">
+                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
                         STEP<br>4
                     </div>
                     <div>
@@ -522,7 +643,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </div>
 
                 <div class="flex items-center space-x-6">
-                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold">
+                    <div class="century21-gold text-white w-20 h-20 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
                         STEP<br>5
                     </div>
                     <div>
@@ -555,7 +676,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 <div class="flex justify-center mb-8">
                     <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/crayon-shin-chan-family.png" 
                          alt="安心・満足のお客様" 
-                         class="mascot-image">
+                         class="mascot-image bg-white">
                 </div>
             </div>
 
@@ -813,7 +934,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                                  alt="乾 佑企 代表取締役" 
                                  class="president-image"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div style="display:none;" class="president-image bg-white flex items-center justify-center text-4xl font-bold text-gray-600 border-2 border-gray-300">
+                            <div style="display:none;" class="president-image bg-gray-200 flex items-center justify-center text-4xl font-bold text-gray-600 border-2 border-gray-300">
                                 乾
                             </div>
                         </div>
@@ -910,6 +1031,14 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <!-- フッター -->
     <footer class="bg-gray-800 text-white py-8 px-6">
         <div class="container mx-auto text-center">
+            <!-- センチュリー21ロゴ -->
+            <div class="mb-6">
+                <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/century21-logo-gold.png" 
+                     alt="センチュリー21" 
+                     class="footer-logo bg-white rounded p-2"
+                     onerror="this.style.display='none';">
+            </div>
+            
             <div class="mb-6">
                 <div class="text-2xl font-bold century21-gold-text mb-2">
                     センチュリー21ホームマート
