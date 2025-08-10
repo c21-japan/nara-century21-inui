@@ -123,11 +123,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
+        /* ロゴと画像の背景処理を削除 */
         .brand-logo {
             max-height: 80px;
             width: auto;
             padding: 10px;
             border-radius: 8px;
+            /* 白背景を削除 */
         }
 
         .mascot-image {
@@ -135,6 +137,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             height: auto;
             padding: 10px;
             border-radius: 8px;
+            /* 白背景を削除 */
         }
 
         .brand-section {
@@ -189,6 +192,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* 白背景を削除 */
         }
 
         /* 一括査定の闇セクション */
@@ -242,6 +246,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             max-height: 60px;
             width: auto;
             margin: 0 auto;
+            /* フッターロゴの白背景も削除 */
+            border-radius: 8px;
+            padding: 8px;
         }
     </style>
 </head>
@@ -416,13 +423,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 <div class="flex flex-col items-center">
                     <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/century21-logo-gold.png" 
                          alt="センチュリー21ロゴ" 
-                         class="brand-logo mb-4 bg-white">
+                         class="brand-logo mb-4">
                     <p class="text-gray-600 font-medium">信頼のセンチュリー21ブランド</p>
                 </div>
                 <div class="flex items-center space-x-6">
                     <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/crayon-shin-chan-1.png" 
                          alt="クレヨンしんちゃん" 
-                         class="mascot-image bg-white">
+                         class="mascot-image">
                     <div class="text-left">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">安心・信頼の実績</h3>
                         <p class="text-gray-600">
@@ -448,7 +455,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 </p>
                 <img src="quocard1000.png" 
                      alt="Amazonギフト券1,000円分" 
-                     class="gift-image bg-white"
+                     class="gift-image"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div style="display:none;" class="bg-white p-6 rounded-lg">
                     <div class="text-2xl font-bold century21-gold-text">Amazonギフト券</div>
@@ -684,7 +691,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 <div class="flex justify-center mb-8">
                     <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/crayon-shin-chan-family.png" 
                          alt="安心・満足のお客様" 
-                         class="mascot-image bg-white">
+                         class="mascot-image">
                 </div>
             </div>
 
@@ -1043,7 +1050,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <div class="mb-6">
                 <img src="https://raw.githubusercontent.com/c21-japan/nara-century21-inui/main/century21-logo-gold.png" 
                      alt="センチュリー21" 
-                     class="footer-logo bg-white rounded p-2"
+                     class="footer-logo"
                      onerror="this.style.display='none';">
             </div>
             
